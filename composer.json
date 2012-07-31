@@ -1,0 +1,23 @@
+{
+    "name": "webignition/SimplyTestableBaseMigrationsBundle",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle for Doctrine migrations common to app.simplytestable.com and worker.simplytestable.com",
+    "keywords": ["SimplyTestable Migrations"],
+    "homepage": "https://github.com/webignition/SimplyTestableBaseMigrationsBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jon Cram",
+            "email": "jon@webignition.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "2.1.*"
+    },
+    "autoload": {
+        "psr-0": { "SimplyTestable\\BaseMigrationsBundle": "" }
+    },
+    "target-dir": "SimplyTestable/BaseMigrationsBundle"
+}
