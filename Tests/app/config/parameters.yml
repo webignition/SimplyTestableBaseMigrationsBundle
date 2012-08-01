@@ -1,0 +1,7 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: null
+    database_name: dev_app_simplytestable_com
+    database_user: st_app_dev
+    database_password: st_app_dev_password
