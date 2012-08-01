@@ -1,2 +1,4 @@
 /nbproject
 /vendor
+/Tests/app/cache/*
+/Tests/app/log/*
