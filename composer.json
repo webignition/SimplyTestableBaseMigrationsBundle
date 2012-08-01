@@ -1,5 +1,5 @@
 {
-    "name": "webignition/simply-testable-base-migrations-bundle",
+    "name": "webignition/simplytestable-base-migrations-bundle",
     "type": "symfony-bundle",
     "description": "Symfony bundle for base Doctrine migrations common to app.simplytestable.com and worker.simplytestable.com",
     "keywords": ["SimplyTestable Migrations"],
