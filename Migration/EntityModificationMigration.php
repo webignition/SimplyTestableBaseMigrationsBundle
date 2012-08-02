@@ -25,10 +25,18 @@ abstract class EntityModificationMigration extends BaseMigration {
     }
     
     public function up(Schema $schema) {
-        $this->addSql("SELECT 1 + 1");
+        if (!$this->hasStatements()) {
+            $this->addCommonStatement("SELECT 1 + 1");
+        }
+        
+        parent::up($schema);
     }
     
     public function down(Schema $schema) {
-        $this->addSql("SELECT 1 + 1");
+        if (!$this->hasStatements()) {
+            $this->addCommonStatement("SELECT 1 + 1");
+        }
+        
+        parent::down($schema);
     }
 }

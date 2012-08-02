@@ -59,6 +59,14 @@ abstract class BaseMigration extends ContainerAwareMigration {
         }        
     }
     
+    /**
+     *
+     * @return boolean
+     */
+    protected function hasStatements() {
+        return $this->statements != array();
+    }
+    
     
 
 }

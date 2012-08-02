@@ -2,10 +2,10 @@
 
 namespace Application\Migrations;
 
-use SimplyTestable\BaseMigrationsBundle\Migration\BaseMigration,
+use SimplyTestable\BaseMigrationsBundle\Migration\EntityModificationMigration,
     Doctrine\DBAL\Schema\Schema;
 
-class Version19700101150000_TestBaseMigrationNoStatements extends BaseMigration
+class Version19700101150000_TestEntityModificationMigration extends EntityModificationMigration
 {
     public function up(Schema $schema)
     {        
