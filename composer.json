@@ -17,7 +17,7 @@
         "symfony/symfony": ">=2.1.0",
         "doctrine/orm": "2.3.*",
         "doctrine/migrations": "*", 
-        "doctrine/doctrine-bundle": "dev-master",
+        "doctrine/doctrine-bundle": "1.1.*",
         "webignition/doctrine-migrations-bundle": "*",
         "webignition/container-aware-migration": "*"
     },
