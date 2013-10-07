@@ -2,3 +2,4 @@
 /vendor
 /Tests/app/cache/*
 /Tests/app/log/*
+/composer.phar
