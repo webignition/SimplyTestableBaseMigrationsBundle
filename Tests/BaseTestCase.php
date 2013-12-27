@@ -20,13 +20,16 @@ abstract class BaseTestCase extends \PHPUnit_Framework_TestCase {
     
 
     public function setUp() {        
+        $this->runConsole("doctrine:database:drop", array("--force" => true));
+        $this->runConsole("doctrine:database:create");
+    }
+    
+    
+    private function boot() {
         $kernel = new \AppKernel("test", true);
         $kernel->boot();
         $this->application = new Application($kernel);
-        $this->application->setAutoExit(false);
-        
-        $this->runConsole("doctrine:database:drop", array("--force" => true));
-        $this->runConsole("doctrine:database:create");
+        $this->application->setAutoExit(false);        
     }
     
     
@@ -46,6 +49,8 @@ abstract class BaseTestCase extends \PHPUnit_Framework_TestCase {
      * @return int
      */
     protected function runConsole($command, Array $options = array()) {
+        $this->boot();
+        
         $args = array(
             'app/console',
             $command,
@@ -94,7 +99,7 @@ abstract class BaseTestCase extends \PHPUnit_Framework_TestCase {
      * @param string $name Migration name - this is the name of the migration class without the leading 'Version'
      * @param int $expectedResponse 
      */
-    private function runMigrationUpDown($name, $expectedResponse) {
+    private function runMigrationUpDown($name, $expectedResponse) {        
         $this->runMigrationWithExpectedResponse($name, 'up', $expectedResponse);
         $this->runMigrationWithExpectedResponse($name, 'down', $expectedResponse);
     }
